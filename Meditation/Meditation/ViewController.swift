@@ -17,6 +17,6 @@ class ViewController: UIViewController {
 
     // MVP используем, фабричный паттерн желательно использовать (refactoring guru)
     // Разобраться мне нужно наконец-то с weak
-    // Completion 
+    // Completion
 }
 
