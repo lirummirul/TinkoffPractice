@@ -7,21 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0709239C29D9AC46004916E7 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0709239B29D9AC46004916E7 /* UserModel.swift */; };
+		072140D529DEE1C000EEA6F2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072140D429DEE1C000EEA6F2 /* MainViewController.swift */; };
+		072140D929E02C3A00EEA6F2 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072140D829E02C3A00EEA6F2 /* AuthService.swift */; };
+		072140DB29E02E5600EEA6F2 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072140DA29E02E5600EEA6F2 /* LoginPresenter.swift */; };
+		072140DD29E02F0400EEA6F2 /* Txt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072140DC29E02F0400EEA6F2 /* Txt.swift */; };
+		072140DF29E0308F00EEA6F2 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072140DE29E0308F00EEA6F2 /* AuthCoordinator.swift */; };
+		072140E129E035E400EEA6F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 072140E029E035E400EEA6F2 /* GoogleService-Info.plist */; };
+		072140E429E0394300EEA6F2 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072140E329E0394300EEA6F2 /* SignupViewController.swift */; };
+		072140E629E03BB900EEA6F2 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072140E529E03BB900EEA6F2 /* CoordinatorProtocol.swift */; };
+		07720F5F29E6E6B7008AD888 /* LoginModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07720F5E29E6E6B7008AD888 /* LoginModuleBuilder.swift */; };
+		07720F6129E6EB8F008AD888 /* LoginViewIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07720F6029E6EB8F008AD888 /* LoginViewIO.swift */; };
+		07720F6429E8557F008AD888 /* FlowCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07720F6329E8557F008AD888 /* FlowCoordinatorProtocol.swift */; };
+		07720F6629E86187008AD888 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07720F6529E86187008AD888 /* AppCoordinator.swift */; };
+		07720F6A29EFC98D008AD888 /* SigupViewIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07720F6929EFC98D008AD888 /* SigupViewIO.swift */; };
+		07720F6C29EFC9A3008AD888 /* SignupModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07720F6B29EFC9A3008AD888 /* SignupModuleBuilder.swift */; };
+		07720F6E29EFCA1D008AD888 /* SignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07720F6D29EFCA1D008AD888 /* SignupPresenter.swift */; };
+		07720F7029F27A29008AD888 /* LoginModuleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07720F6F29F27A29008AD888 /* LoginModuleIO.swift */; };
+		07C95BED29DD8CAF001FD318 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C95BEC29DD8CAF001FD318 /* ProfileViewController.swift */; };
+		07C95BEF29DD8D3A001FD318 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C95BEE29DD8D3A001FD318 /* LoginViewController.swift */; };
 		07DD2A4229CC8A830074E491 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DD2A4129CC8A830074E491 /* AppDelegate.swift */; };
 		07DD2A4429CC8A830074E491 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DD2A4329CC8A830074E491 /* SceneDelegate.swift */; };
 		07DD2A4629CC8A830074E491 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DD2A4529CC8A830074E491 /* ViewController.swift */; };
-		07DD2A4929CC8A830074E491 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2A4729CC8A830074E491 /* Main.storyboard */; };
 		07DD2A4B29CC8A840074E491 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2A4A29CC8A840074E491 /* Assets.xcassets */; };
 		07DD2A4E29CC8A840074E491 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2A4C29CC8A840074E491 /* LaunchScreen.storyboard */; };
 		D07A824F32CE46E0B6E54C63 /* Pods_Meditation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC9C7E9D705ECB35EC8B8D8 /* Pods_Meditation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0709239B29D9AC46004916E7 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		072140D429DEE1C000EEA6F2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		072140D829E02C3A00EEA6F2 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		072140DA29E02E5600EEA6F2 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		072140DC29E02F0400EEA6F2 /* Txt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Txt.swift; sourceTree = "<group>"; };
+		072140DE29E0308F00EEA6F2 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		072140E029E035E400EEA6F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		072140E329E0394300EEA6F2 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		072140E529E03BB900EEA6F2 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		07720F5E29E6E6B7008AD888 /* LoginModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleBuilder.swift; sourceTree = "<group>"; };
+		07720F6029E6EB8F008AD888 /* LoginViewIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewIO.swift; sourceTree = "<group>"; };
+		07720F6329E8557F008AD888 /* FlowCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		07720F6529E86187008AD888 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		07720F6929EFC98D008AD888 /* SigupViewIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigupViewIO.swift; sourceTree = "<group>"; };
+		07720F6B29EFC9A3008AD888 /* SignupModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModuleBuilder.swift; sourceTree = "<group>"; };
+		07720F6D29EFCA1D008AD888 /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
+		07720F6F29F27A29008AD888 /* LoginModuleIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleIO.swift; sourceTree = "<group>"; };
+		07C95BEC29DD8CAF001FD318 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		07C95BEE29DD8D3A001FD318 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		07DD2A3E29CC8A830074E491 /* Meditation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meditation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07DD2A4129CC8A830074E491 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07DD2A4329CC8A830074E491 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		07DD2A4529CC8A830074E491 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		07DD2A4829CC8A830074E491 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07DD2A4A29CC8A840074E491 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07DD2A4D29CC8A840074E491 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07DD2A4F29CC8A840074E491 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,11 +78,114 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0709239D29D9D125004916E7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				072140D829E02C3A00EEA6F2 /* AuthService.swift */,
+				072140DC29E02F0400EEA6F2 /* Txt.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		071E29C529D5E0FD00020386 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0709239B29D9AC46004916E7 /* UserModel.swift */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		072140D329DEE1B000EEA6F2 /* Mian */ = {
+			isa = PBXGroup;
+			children = (
+				072140D429DEE1C000EEA6F2 /* MainViewController.swift */,
+			);
+			path = Mian;
+			sourceTree = "<group>";
+		};
+		072140E229E0392000EEA6F2 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				07720F6729EFC963008AD888 /* Presenter */,
+				07720F6829EFC971008AD888 /* View */,
+				07720F6B29EFC9A3008AD888 /* SignupModuleBuilder.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		07720F5C29E6E666008AD888 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				07C95BEE29DD8D3A001FD318 /* LoginViewController.swift */,
+				07720F6029E6EB8F008AD888 /* LoginViewIO.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		07720F5D29E6E66C008AD888 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				072140DA29E02E5600EEA6F2 /* LoginPresenter.swift */,
+				07720F6F29F27A29008AD888 /* LoginModuleIO.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		07720F6229E8554F008AD888 /* FlowCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				07720F6329E8557F008AD888 /* FlowCoordinatorProtocol.swift */,
+				07720F6529E86187008AD888 /* AppCoordinator.swift */,
+				072140E529E03BB900EEA6F2 /* CoordinatorProtocol.swift */,
+				072140DE29E0308F00EEA6F2 /* AuthCoordinator.swift */,
+			);
+			path = FlowCoordinator;
+			sourceTree = "<group>";
+		};
+		07720F6729EFC963008AD888 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				07720F6D29EFCA1D008AD888 /* SignupPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		07720F6829EFC971008AD888 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				072140E329E0394300EEA6F2 /* SignupViewController.swift */,
+				07720F6929EFC98D008AD888 /* SigupViewIO.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		07C95BE529DD8C11001FD318 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				072140D329DEE1B000EEA6F2 /* Mian */,
+				07C95BEB29DD8C81001FD318 /* Profile */,
+				07C95BE629DD8C26001FD318 /* Login */,
+				072140E229E0392000EEA6F2 /* Signup */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		07C95BE629DD8C26001FD318 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				07720F5D29E6E66C008AD888 /* Presenter */,
+				07720F5C29E6E666008AD888 /* View */,
+				07720F5E29E6E6B7008AD888 /* LoginModuleBuilder.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		07C95BEB29DD8C81001FD318 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				07C95BEC29DD8CAF001FD318 /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		07DD2A3529CC8A820074E491 = {
@@ -70,14 +209,17 @@
 		07DD2A4029CC8A830074E491 /* Meditation */ = {
 			isa = PBXGroup;
 			children = (
+				07720F6229E8554F008AD888 /* FlowCoordinator */,
+				0709239D29D9D125004916E7 /* Services */,
+				07C95BE529DD8C11001FD318 /* Presentation */,
 				071E29C529D5E0FD00020386 /* Modules */,
 				07DD2A4129CC8A830074E491 /* AppDelegate.swift */,
 				07DD2A4329CC8A830074E491 /* SceneDelegate.swift */,
 				07DD2A4529CC8A830074E491 /* ViewController.swift */,
-				07DD2A4729CC8A830074E491 /* Main.storyboard */,
 				07DD2A4A29CC8A840074E491 /* Assets.xcassets */,
 				07DD2A4C29CC8A840074E491 /* LaunchScreen.storyboard */,
 				07DD2A4F29CC8A840074E491 /* Info.plist */,
+				072140E029E035E400EEA6F2 /* GoogleService-Info.plist */,
 			);
 			path = Meditation;
 			sourceTree = "<group>";
@@ -110,6 +252,8 @@
 				07DD2A3A29CC8A820074E491 /* Sources */,
 				07DD2A3B29CC8A820074E491 /* Frameworks */,
 				07DD2A3C29CC8A820074E491 /* Resources */,
+				0709239A29D5F7B1004916E7 /* SwiftLint */,
+				FECCB28EAF6CE2393D9917D2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,14 +303,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				07DD2A4E29CC8A840074E491 /* LaunchScreen.storyboard in Resources */,
+				072140E129E035E400EEA6F2 /* GoogleService-Info.plist in Resources */,
 				07DD2A4B29CC8A840074E491 /* Assets.xcassets in Resources */,
-				07DD2A4929CC8A830074E491 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0709239A29D5F7B1004916E7 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		9A65649D3E44B64D060E01EC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -189,6 +351,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FECCB28EAF6CE2393D9917D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Meditation/Pods-Meditation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Meditation/Pods-Meditation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Meditation/Pods-Meditation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -196,23 +375,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07C95BEF29DD8D3A001FD318 /* LoginViewController.swift in Sources */,
+				07720F7029F27A29008AD888 /* LoginModuleIO.swift in Sources */,
+				072140D929E02C3A00EEA6F2 /* AuthService.swift in Sources */,
+				072140E629E03BB900EEA6F2 /* CoordinatorProtocol.swift in Sources */,
+				07720F6C29EFC9A3008AD888 /* SignupModuleBuilder.swift in Sources */,
 				07DD2A4629CC8A830074E491 /* ViewController.swift in Sources */,
+				072140DD29E02F0400EEA6F2 /* Txt.swift in Sources */,
+				07720F6E29EFCA1D008AD888 /* SignupPresenter.swift in Sources */,
 				07DD2A4229CC8A830074E491 /* AppDelegate.swift in Sources */,
+				07720F6429E8557F008AD888 /* FlowCoordinatorProtocol.swift in Sources */,
+				072140DF29E0308F00EEA6F2 /* AuthCoordinator.swift in Sources */,
+				07720F5F29E6E6B7008AD888 /* LoginModuleBuilder.swift in Sources */,
+				07720F6A29EFC98D008AD888 /* SigupViewIO.swift in Sources */,
+				072140E429E0394300EEA6F2 /* SignupViewController.swift in Sources */,
+				07720F6629E86187008AD888 /* AppCoordinator.swift in Sources */,
+				07720F6129E6EB8F008AD888 /* LoginViewIO.swift in Sources */,
+				072140DB29E02E5600EEA6F2 /* LoginPresenter.swift in Sources */,
+				0709239C29D9AC46004916E7 /* UserModel.swift in Sources */,
+				07C95BED29DD8CAF001FD318 /* ProfileViewController.swift in Sources */,
 				07DD2A4429CC8A830074E491 /* SceneDelegate.swift in Sources */,
+				072140D529DEE1C000EEA6F2 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		07DD2A4729CC8A830074E491 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				07DD2A4829CC8A830074E491 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		07DD2A4C29CC8A840074E491 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -274,7 +463,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -328,7 +517,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -350,7 +539,7 @@
 				INFOPLIST_FILE = Meditation/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -379,7 +568,7 @@
 				INFOPLIST_FILE = Meditation/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
