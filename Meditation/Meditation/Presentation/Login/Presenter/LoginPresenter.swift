@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 class LoginPresenter {
     weak var view: LoginViewInput?
+//    weak var viewLoginController: LoginViewController?
     
     private let output: LoginModuleOutput
     init(output: LoginModuleOutput) {
@@ -21,9 +23,24 @@ extension LoginPresenter: LoginViewOutput {
         output.moduleWantsToSignUp()
     }
     
-    func didTapLoginButton(login: String, password: String) {
-        // тут валидация
-    }
+//    func didTapLoginButton(login: String, password: String) {
+//        // тут валидация
+//        output.moduleDidFinishAuth()
+//    }
+    public func didTapLoginButton(email: String, password: String) {
+//        Auth.auth().signIn(
+//            withEmail: email,
+//            password: password
+//        ) { result, error in
+//            if error != nil {
+////                self.viewLoginController!.showOneActionAlert(title: "Error", message: "Вы что-то сделали не правильно", mainButtomTitle: "OK")
+//                print("FATAL ERRROR")
+////                 return
+//            } else {
+                output.moduleDidFinishAuth()
+//            }
+//        }
+     }
 }
 
 extension LoginPresenter: LoginModuleInput { }

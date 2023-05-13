@@ -11,6 +11,7 @@ protocol LoginViewInput: AnyObject {
 }
 
 protocol LoginViewOutput: AnyObject {
-    func didTapLoginButton(login: String, password: String) // кнопка входа
+    func didTapLoginButton(email: String, password: String)
+//    func didTapLoginButton(login: String, password: String) // кнопка входа
     func didTapSignUpButton() // кнопка регисрации
 }

@@ -7,9 +7,7 @@
 
 import Foundation
 
-protocol LoginModuleInput: AnyObject {
-    
-}
+protocol LoginModuleInput: AnyObject { }
 
 protocol LoginModuleOutput: AnyObject {
     func moduleWantsToSignUp()

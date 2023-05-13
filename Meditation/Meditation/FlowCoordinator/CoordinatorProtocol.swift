@@ -12,7 +12,6 @@ protocol CoordinatorProtocol {
     func start()
     func showLogin()
     func showSignup()
-    func showHome()
 }
 
 protocol AuthInput: AnyObject {

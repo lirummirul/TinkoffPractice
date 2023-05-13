@@ -11,5 +11,5 @@ protocol SignupViewInput: AnyObject {
 }
 
 protocol SignupViewOutput: AnyObject {
-    func signupButtonTapped(login: String, password: String)
+    func signupButtonTapped(login: String, email: String, password: String)
 }

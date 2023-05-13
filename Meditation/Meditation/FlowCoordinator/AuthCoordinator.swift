@@ -9,8 +9,9 @@ import UIKit
 
 class AuthCoordinator: CoordinatorProtocol {
     var navigationController: UINavigationController
-    
-    init(navigationController: UINavigationController) {
+    private let output: AuthOutput
+    init(output: AuthOutput, navigationController: UINavigationController) {
+        self.output = output
         self.navigationController = navigationController
     }
     
@@ -24,37 +25,37 @@ class AuthCoordinator: CoordinatorProtocol {
     }
     
     func showSignup() {
-        let signupVC = SignupModuleBuilder().build()
+        let signupVC = SignupModuleBuilder().build(output: self)
         navigationController.pushViewController(signupVC, animated: true)
     }
-    
-    func showHome() {
-        let homeVC = MainViewController()
-        navigationController.pushViewController(homeVC, animated: true)
-    }
-
 }
 
 extension AuthCoordinator: LoginModuleOutput {
-    func moduleDidFinishAuth() { }
+    func moduleDidFinishAuth() {
+        output.signLoginSuccessfully()
+    }
     
     func moduleWantsToSignUp() {
         showSignup()
     }
 }
 
+extension AuthCoordinator: SignupModuleOutput {
+    func moduleHasCompletedRegistration() {
+        showLogin()
+    }
+    func moduleWantsToReturn() {
+        showLogin()
+    }
+}
+
 extension AuthCoordinator: AuthInput {
     func loginDidFinish() {
-        showHome()
+        // Вот тут я не уверена
+        output.signLoginSuccessfully()
     }
 
     func loginDidTapSingup() {
         showSignup()
-    }
-}
-
-extension AuthCoordinator: AuthOutput {
-    func signLoginSuccessfully() {
-        showHome()
     }
 }

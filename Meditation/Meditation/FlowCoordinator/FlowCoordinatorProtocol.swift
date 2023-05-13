@@ -10,12 +10,10 @@ import UIKit
 protocol FlowCoordinatorProtocol {
     var navigationController: UINavigationController { get }
     func start()
+    func auth()
+    func showMain()
 }
 
 protocol AppInput: AnyObject {
-    
-}
-
-protocol AppOutput: AnyObject {
-    
+    func signLoginSuccessfully()
 }
