@@ -7,20 +7,37 @@
 
 import UIKit
 
-class StopWatchCoordinator: Coordinator {
-    var splitViewController = UISplitViewController()
-    var primaryNavigationController = CoordinatedNavigationController()
- 
-    init() {
+class StopWatchCoordinator: Coordinator, StopWatchCoordinatorProtocol {
+    var primaryNavigationController: CoordinatedNavigationController
+    private let output: StopWatchOutput
+    
+    init(navigationController: CoordinatedNavigationController = CoordinatedNavigationController(), output: StopWatchOutput) {
+        self.output = output
         // Настройка главного контроллера
+        self.primaryNavigationController = navigationController
         primaryNavigationController.navigationBar.prefersLargeTitles = true
         primaryNavigationController.coordinator = self
-        let stopwatchViewController = StopWatchViewController()
-        stopwatchViewController.coordinator = self
+        let stopwatchViewController = StopWatchModuleBuilder().build(output: self)
+//        stopwatchViewController.coordinator = self
         primaryNavigationController.viewControllers = [stopwatchViewController]
 
         // Настройка деталей контроллера
-        splitViewController.viewControllers = [primaryNavigationController]
-        splitViewController.tabBarItem = UITabBarItem(title: "Stopwath", image: UIImage(systemName: "button.programmable"), tag: 1)
+        stopwatchViewController.tabBarItem = UITabBarItem(title: "Stopwath", image: UIImage(systemName: "button.programmable"), tag: 1)
     }
+}
+
+extension StopWatchCoordinator: StopWatchModuleOutput {
+    func wantsToSwitchToTimer() {
+        output.wantsToSwitchToTimer()
+    }
+    
+    func wantsToSwitchToPrograms() {
+        output.wantsToSwitchToPrograms()
+    }
+    
+    func wantsToSwitchToProfile() {
+        output.wantsToSwitchToProfile()
+    }
+    
+    
 }

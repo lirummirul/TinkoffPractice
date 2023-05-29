@@ -17,6 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         FirebaseApp.configure()
+//        Auth.auth().addStateDidChangeListener{ (auth, user) in
+//            if user == nil {
+//                print("Лада, ты тут")
+//            }
+//        }
         return true
     }
 }

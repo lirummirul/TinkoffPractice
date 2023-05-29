@@ -7,10 +7,9 @@
 
 import UIKit
 
-class MainCoordinator: Coordinator {
-    var splitViewController = UISplitViewController()
-    var navigationController = CoordinatedNavigationController()
-
+class MainCoordinator: Coordinator, MainCoordinatorProtocol {
+    var primaryNavigationController: CoordinatedNavigationController
+    private let output: MainOutput
     private static let firstRunDefaultsKey = "ShownFirstRun"
 
     // True при первом запуске приложения.
@@ -18,15 +17,30 @@ class MainCoordinator: Coordinator {
         return UserDefaults.standard.bool(forKey: MainCoordinator.firstRunDefaultsKey) == false
     }
 
-    init() {
-        navigationController.navigationBar.prefersLargeTitles = true
-        navigationController.coordinator = self
+    init(navigationController: CoordinatedNavigationController = CoordinatedNavigationController(), output: MainOutput) {
+        self.output = output
+        self.primaryNavigationController = navigationController
+        primaryNavigationController.navigationBar.prefersLargeTitles = true
+        primaryNavigationController.coordinator = self
 
-        let viewController = MainViewController()
-        viewController.coordinator = self
-        navigationController.viewControllers = [viewController]
+        let viewController = MainModuleBuilder().build(output: self)
+//        viewController.coordinator = self
+        primaryNavigationController.viewControllers = [viewController]
+        
+        viewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "button.programmable"), tag: 1)
+    }
+}
 
-        splitViewController.viewControllers = [navigationController]
-        splitViewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "button.programmable"), tag: 1)
+extension MainCoordinator: MainModuleOutput {
+    func wantsToSwitchToStopwatch() {
+        output.wantsToSwitchToStopwatch()
+    }
+
+    func wantsToSwitchToPrograms() {
+        output.wantsToSwitchToPrograms()
+    }
+
+    func wantsToSwitchToProfile() {
+        output.wantsToSwitchToProfile()
     }
 }

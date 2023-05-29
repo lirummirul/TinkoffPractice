@@ -7,20 +7,41 @@
 
 import UIKit
 
-class ProfileCoordinator: Coordinator {
-    var splitViewController = UISplitViewController()
-    var primaryNavigationController = CoordinatedNavigationController()
+class ProfileCoordinator: Coordinator, ProfileCoordinatorProtocol {
+    var primaryNavigationController: CoordinatedNavigationController
 
-    init() {
+    private let output: ProfileOutput
+    private static let firstRunDefaultsKey = "ShownFirstRun"
+
+    // True при первом запуске приложения.
+    
+    init(navigationController: CoordinatedNavigationController = CoordinatedNavigationController(), output: ProfileOutput) {
         // Настройка главного конроллера
+        self.output = output
+        self.primaryNavigationController = navigationController
         primaryNavigationController.navigationBar.prefersLargeTitles = true
         primaryNavigationController.coordinator = self
-        let viewController = ProfileViewController()
-        viewController.coordinator = self
+        let viewController = ProfileModuleBuilder().build(output: self)
+//        viewController.coordinator = self
         primaryNavigationController.viewControllers = [viewController]
 
-        splitViewController.viewControllers = [primaryNavigationController]
         viewController.loadViewIfNeeded()
-        splitViewController.tabBarItem = UITabBarItem(title: "Person", image: UIImage(systemName: "button.programmable"), tag: 4)
+        viewController.tabBarItem = UITabBarItem(title: "Person", image: UIImage(systemName: "button.programmable"), tag: 4)
     }
+}
+
+extension ProfileCoordinator: ProfileModuleOutput {
+    func wantsToSwitchToStopwatch() {
+        output.wantsToSwitchToStopwatch()
+    }
+    
+    func wantsToSwitchToPrograms() {
+        output.wantsToSwitchToPrograms()
+    }
+    
+    func wantsToSwitchToTimer() {
+        output.wantsToSwitchToTimer()
+    }
+    
+    
 }

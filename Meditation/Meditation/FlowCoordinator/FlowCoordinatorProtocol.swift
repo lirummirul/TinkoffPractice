@@ -17,3 +17,5 @@ protocol FlowCoordinatorProtocol {
 protocol AppInput: AnyObject {
     func signLoginSuccessfully()
 }
+
+protocol AppOutput: AnyObject { }

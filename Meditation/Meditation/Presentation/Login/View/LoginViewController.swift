@@ -131,12 +131,13 @@ class LoginViewController: UIViewController {
 //            let login = loginTextField.text,
             let email = loginTextField.text,
             let password = passTextField.text,
-            email.isEmpty,
-            password.isEmpty
+            !email.isEmpty,
+            !password.isEmpty
         else {
             return
         }
         output.didTapLoginButton(email: email, password: password)
+//        print("123123")
     }
     
     @objc func didTapSignUpButton() {

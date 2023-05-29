@@ -14,6 +14,18 @@ class ProfileViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
     var coordinator: ProfileCoordinator?
     var calendar: FSCalendar!
     var greenDate = false
+    
+    // MARK: - LifeCycle
+    private let output: ProfileViewOutput
+    
+    init(output: ProfileViewOutput) {
+        self.output = output
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,3 +81,5 @@ extension ProfileViewController {
         return nil // Заголовок для даты (можно использовать для отображения чисел)
     }
 }
+
+extension ProfileViewController: ProfileViewInput { }
