@@ -34,6 +34,8 @@
 		0763AA632A24F8500057B19A /* StopWatchModuleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763AA622A24F8500057B19A /* StopWatchModuleIO.swift */; };
 		0763AA652A24F85D0057B19A /* StopWatchCoordinatopProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763AA642A24F85D0057B19A /* StopWatchCoordinatopProtocol.swift */; };
 		0763AA672A24F86B0057B19A /* StopWatchModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763AA662A24F86B0057B19A /* StopWatchModuleBuilder.swift */; };
+		0763AA692A25EAA50057B19A /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763AA682A25EAA50057B19A /* Globals.swift */; };
+		0763AA6C2A2621140057B19A /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763AA6B2A2621140057B19A /* Music.swift */; };
 		07718DAD29FB993D003CEAD3 /* SignupModuleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07718DAC29FB993D003CEAD3 /* SignupModuleIO.swift */; };
 		07718DBF29FBAB17003CEAD3 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07718DBE29FBAB17003CEAD3 /* AlertManager.swift */; };
 		07718E022A03BD0D003CEAD3 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07718E012A03BD0D003CEAD3 /* ProfilePresenter.swift */; };
@@ -96,6 +98,8 @@
 		0763AA622A24F8500057B19A /* StopWatchModuleIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchModuleIO.swift; sourceTree = "<group>"; };
 		0763AA642A24F85D0057B19A /* StopWatchCoordinatopProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchCoordinatopProtocol.swift; sourceTree = "<group>"; };
 		0763AA662A24F86B0057B19A /* StopWatchModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchModuleBuilder.swift; sourceTree = "<group>"; };
+		0763AA682A25EAA50057B19A /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		0763AA6B2A2621140057B19A /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		07718DAC29FB993D003CEAD3 /* SignupModuleIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModuleIO.swift; sourceTree = "<group>"; };
 		07718DBE29FBAB17003CEAD3 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		07718E012A03BD0D003CEAD3 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 		0709239D29D9D125004916E7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0763AA6A2A2620FD0057B19A /* YA_API */,
 				072140D829E02C3A00EEA6F2 /* Coordinator.swift */,
 				07718E212A0E7FD3003CEAD3 /* CoordinatedNavigationController.swift */,
 			);
@@ -278,11 +283,20 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		0763AA6A2A2620FD0057B19A /* YA_API */ = {
+			isa = PBXGroup;
+			children = (
+				0763AA6B2A2621140057B19A /* Music.swift */,
+			);
+			path = YA_API;
+			sourceTree = "<group>";
+		};
 		07718DBC29FBAACD003CEAD3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				07718E112A0BD825003CEAD3 /* Custom */,
 				07718DBD29FBAAE5003CEAD3 /* Extensions */,
+				0763AA682A25EAA50057B19A /* Globals.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -625,10 +639,12 @@
 				07718E242A0E80FD003CEAD3 /* StopWatchViewController.swift in Sources */,
 				0763AA532A24EC390057B19A /* ProgramModuleIO.swift in Sources */,
 				0763AA4F2A24EC180057B19A /* ProgramCoordinatorProtocol.swift in Sources */,
+				0763AA6C2A2621140057B19A /* Music.swift in Sources */,
 				0763AA362A23BB260057B19A /* MainViewIO.swift in Sources */,
 				0763AA632A24F8500057B19A /* StopWatchModuleIO.swift in Sources */,
 				0763AA322A23BAE40057B19A /* MainModuleIO.swift in Sources */,
 				07718E072A03BD49003CEAD3 /* ProfileModuleBuilder.swift in Sources */,
+				0763AA692A25EAA50057B19A /* Globals.swift in Sources */,
 				072140D929E02C3A00EEA6F2 /* Coordinator.swift in Sources */,
 				07718E042A03BD1A003CEAD3 /* ProfileModuleIO.swift in Sources */,
 				073BE4A02A1BA33200CADBD7 /* SRCountdownTimer.swift in Sources */,

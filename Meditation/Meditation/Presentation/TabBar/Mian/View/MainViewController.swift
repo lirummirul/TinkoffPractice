@@ -4,212 +4,62 @@
 //
 //  Created by Лада on 06.04.2023.
 //
-//
-//import UIKit
-//
-//class MainViewController: UIViewController  {
-//    var coordinator: MainCoordinator?
-//
-////    let datePicker = UIDatePicker()
-//    var timer: Timer?
-//    let whiteView = UIView()
-//    var count = 0
-//    var alarmDate = 0.0
-//
-//    let remainingTimeLabel: UILabel = {
-//        let label = UILabel()
-//        label.text = "Оставшееся время"
-//        return label
-//    }()
-//
-//    let sleepButtonImage: UIImageView = {
-//        let image = UIImageView()
-//        return image
-//    }()
-//
-//    let startButtonImage: UIImageView = {
-//        let image = UIImageView()
-//        return image
-//    }()
-//
-//    let buttonExit: UIButton = {
-//        let button = UIButton()
-//        button.translatesAutoresizingMaskIntoConstraints = false
-//        button.setTitle("   Выйти   ", for: .normal)
-//        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-//        let titleColorButt = UIColor(red: 0.12, green: 0.25, blue: 0.05, alpha: 1.0)
-//        button.setTitleColor(titleColorButt, for: .normal)
-//        button.backgroundColor = UIColor.white.withAlphaComponent(0.65)
-//        button.layer.cornerRadius = 15
-//        return button
-//    }()
-//
-//    let buttonStart: UIButton = {
-//        let button = UIButton()
-//        button.translatesAutoresizingMaskIntoConstraints = false
-//        button.setTitle("   Начать   ", for: .normal)
-//        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-//        let titleColorButt = UIColor(red: 0.12, green: 0.25, blue: 0.05, alpha: 1.0)
-//        button.setTitleColor(titleColorButt, for: .normal)
-//        button.backgroundColor = UIColor.white.withAlphaComponent(0.65)
-//        button.layer.cornerRadius = 15
-//        return button
-//    }()
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        sleepButtonImage.isHidden = true
-//        whiteView.backgroundColor = UIColor.white.withAlphaComponent(0.4)
-//        whiteView.layer.cornerRadius = 15
-//        whiteView.layer.masksToBounds = true
-//        view.backgroundColor = UIColor(patternImage: UIImage(named: "imgTimer")!)
-////        datePicker.datePickerMode = .countDownTimer
-////        datePicker.setValue(UIColor.white, forKeyPath: "textColor")
-////        datePicker.addTarget(self, action: #selector(startTimer), for: .valueChanged)
-////        datePicker.addTarget(self, action: #selector(datePickerActionTwo(sender:)), for: .valueChanged)
-//        setup()
-//    }
-//
-//    func setup() {
-//        view.addSubview(whiteView)
-//        //        view.addSubview(buttonExit)
-////        view.addSubview(datePicker)
-//        view.addSubview(buttonStart)
-////        datePicker.translatesAutoresizingMaskIntoConstraints = false
-//        whiteView.translatesAutoresizingMaskIntoConstraints = false
-//        whiteView.widthAnchor.constraint(equalToConstant: 300).isActive = true
-//        whiteView.heightAnchor.constraint(equalToConstant: 300).isActive = true
-//        //        buttonExit.center = CGPoint(x: view.frame.midX, y: view.frame.midY - view.frame.height / 3.5)
-//
-//        NSLayoutConstraint.activate([
-////            datePicker.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 20),
-////            datePicker.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -30),
-//
-//            whiteView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//            whiteView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -30),
-//
-//            buttonStart.centerXAnchor.constraint(equalTo: whiteView.centerXAnchor),
-//            buttonStart.centerYAnchor.constraint(equalTo: whiteView.centerYAnchor, constant: 200)
-//        ])
-////        buttonStart.addTarget(self, action: #selector(startTimer), for: .touchUpInside)
-////        buttonExit.addTarget(self, action: #selector(timerFinished), for: .touchUpInside)
-//    }
-//
-////    @objc func datePickerAction() {
-////        let timeInterval = datePicker.countDownDuration
-////        if let timer = timer {
-////            timer.invalidate()
-////        }
-////        timer = Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: false) { [weak self] _ in
-////            self?.timerDidEnd()
-////        }
-////    }
-//
-////    @objc func startTimer() {
-////        let selectedHours = pickerView.selectedRow(inComponent: 0)
-////        let selectedMinutes = pickerView.selectedRow(inComponent: 1)
-////        let selectedSeconds = pickerView.selectedRow(inComponent: 2)
-////
-////        let totalSeconds = selectedHours * 3600 + selectedMinutes * 60 + selectedSeconds
-////        timer = Timer.scheduledTimer(timeInterval: TimeInterval(totalSeconds), target: self, selector: #selector(timerFinished), userInfo: nil, repeats: false)
-////    }
-////
-////    @objc func timerFinished() {
-////        // Обработка завершения таймера
-////        print("Timer finished!")
-////    }
-//
-////    func timerDidEnd() { }
-////
-////    @objc func didTapStartButton() { }
-////
-////    @objc func exit() {
-////        print("Timer finished!")
-////    }
-////
-////    @objc func startTimer() {
-////        let duration = datePicker.countDownDuration // Получаем отрицательное значение из date picker
-////        timer = Timer.scheduledTimer(timeInterval: duration, target: self, selector: #selector(exit), userInfo: nil, repeats: false)
-////    }
-//
-//
-////    func createTimer() {
-//////        let timeInterval = datePicker.countDownDuration
-//////        if let timer = timer {
-//////            timer.invalidate()
-//////        }
-//////        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [self]_ in
-////        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [self] (timer: Timer) in
-////            //        timer = Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: false) { [weak self] _ in
-////            if self.count == 0 {
-////                //                self.stopSoundRelax()
-////                //                self.playSound()
-////                self.remainingTimeLabel.isHidden = true
-////                self.stopTimer()
-////            } else {
-////                self.count -= 1
-////                let (h,m,s) = self?.secondsToHoursMinutesSeconds(seconds: self.count)
-////                self.remainingTimeLabel.text = "осталось \(h):\(m):\(s)"
-////            }
-////        })
-////        //        }
-////    }
-////
-////    func createTimer() {
-////        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [self]_ in
-////            if count.words.isEmpty {
-//////                self.stopSoundRelax()
-//////                self.playSound()
-////                self.remainingTimeLabel.isHidden = true
-////                self.stopTimer()
-////            } else {
-////                self.count -= 1
-////                let (hours, minuts, second) = self.secondsToHoursMinutesSeconds(seconds: self.count)
-////                self.remainingTimeLabel.text = "осталось \(hours):\(minuts):\(second)"
-////            }
-////        })
-////    }
-////
-////    func secondsToHoursMinutesSeconds (seconds : Int) -> (Int, Int, Int) {
-////        return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
-////    }
-////
-////    func stopTimer() {
-////        timer?.invalidate()
-////    }
-////
-////    @objc func datePickerActionTwo(sender: UIDatePicker) {
-////        alarmDate = sender.date.timeIntervalSince1970
-////    }
-////
-////    @objc func didTapStartButton(sender: UIButton){
-////        if sender.title(for: .normal) == "Приступить ко сну"{
-////            sender.setTitle("Проснуться", for: .normal)
-////            self.remainingTimeLabel.isHidden = false
-////            self.sleepButtonImage.isHidden = false
-////            self.startButtonImage.isHidden = true
-////            count = Int(self.alarmDate) - Int(Date().timeIntervalSince1970)
-////            createTimer()
-////            //            playSoundRelax()
-////        } else {
-////            sender.setTitle("Приступить ко сну", for: .normal)
-////
-////            self.startButtonImage.isHidden = false
-////            self.sleepButtonImage.isHidden = true
-////            //            playerRelax.stop()
-////            //            stopSound()
-////        }
-////    }
-//}
-
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, SRCountdownTimerDelegate {
 //    var coordinator: MainCoordinator?
     var timer: SRCountdownTimer!
+    let datePicker = UIDatePicker()
     
+    let buttonStart: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setTitle("начать", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 21)
+        let col = UIColor(red: 0.24, green: 0.54, blue: 0.58, alpha: 1.0)
+        button.setTitleColor(col, for: .normal)
+        let backgroundColorButtonAuth = UIColor(red: 1, green: 1, blue: 1, alpha: 0.5)
+        button.backgroundColor = backgroundColorButtonAuth
+        button.layer.cornerRadius = 20
+        return button
+    }()
+    
+    let pauseButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setTitle("пауза", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 21)
+        let col = UIColor(red: 0.24, green: 0.54, blue: 0.58, alpha: 1.0)
+        button.setTitleColor(col, for: .normal)
+        let backgroundColorButtonAuth = UIColor(red: 1, green: 1, blue: 1, alpha: 0.5)
+        button.backgroundColor = backgroundColorButtonAuth
+        button.layer.cornerRadius = 20
+        return button
+    }()
+    
+    let resumeButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setTitle("продолжить", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 21)
+        let col = UIColor(red: 0.24, green: 0.54, blue: 0.58, alpha: 1.0)
+        button.setTitleColor(col, for: .normal)
+        let backgroundColorButtonAuth = UIColor(red: 1, green: 1, blue: 1, alpha: 0.5)
+        button.backgroundColor = backgroundColorButtonAuth
+        button.layer.cornerRadius = 20
+        return button
+    }()
+    
+    let stopButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setTitle("остановить", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 21)
+        let col = UIColor(red: 0.24, green: 0.54, blue: 0.58, alpha: 1.0)
+        button.setTitleColor(col, for: .normal)
+        let backgroundColorButtonAuth = UIColor(red: 1, green: 1, blue: 1, alpha: 0.5)
+        button.backgroundColor = backgroundColorButtonAuth
+        button.layer.cornerRadius = 20
+        return button
+    }()
+
     // MARK: - LifeCycle
     private let output: MainViewOutput
     
@@ -224,6 +74,26 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        let backgroundColorMain = UIColor(red: 0.58, green: 0.80, blue: 0.66, alpha: 1.0)
+        let backgroundImage = UIImage(named: "ocean")
+        let backgroundImageView = UIImageView(image: backgroundImage)
+        backgroundImageView.contentMode = .scaleAspectFill
+        backgroundImageView.frame = view.bounds
+        view.addSubview(backgroundImageView)
+        view.sendSubviewToBack(backgroundImageView)
+        datePicker.datePickerMode = .countDownTimer
+//        if let label = datePicker.subviews.first?.subviews.first as? UILabel {
+//            label.textColor = UIColor.white
+//        }
+//        datePicker.tintColor = UIColor.white
+//        datePicker.textColor = UIColor.white
+        // Создание пользовательского UITextField для отображения выбранной даты
+//        let dateTextField = UITextField()
+//        dateTextField.inputView = datePicker
+
+        // Настройка цвета текста в UITextField
+//        dateTextField.textColor = .white
+//        datePicker.backgroundColor = UIColor.clear
         timer = SRCountdownTimer()
         setup()
     }
@@ -231,27 +101,117 @@ class MainViewController: UIViewController {
     // MARK: - UI Setup
     func setup() {
         view.addSubview(timer)
+        view.addSubview(datePicker)
+        view.addSubview(buttonStart)
+        view.addSubview(resumeButton)
+        view.addSubview(pauseButton)
+        view.addSubview(stopButton)
+//        view.addSubview(miniView)
         timer.translatesAutoresizingMaskIntoConstraints = false
+        datePicker.translatesAutoresizingMaskIntoConstraints = false
+        buttonStart.translatesAutoresizingMaskIntoConstraints = false
+        pauseButton.translatesAutoresizingMaskIntoConstraints = false
+        resumeButton.translatesAutoresizingMaskIntoConstraints = false
+        stopButton.translatesAutoresizingMaskIntoConstraints = false
+//        miniView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            timer.topAnchor.constraint(equalTo: view.topAnchor, constant: 250),
+            timer.topAnchor.constraint(equalTo: view.topAnchor, constant: 200),
             timer.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
             timer.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
-            timer.heightAnchor.constraint(equalToConstant: 40)
+            timer.widthAnchor.constraint(equalToConstant: 300),
+            timer.heightAnchor.constraint(equalToConstant: 300),
+            
+            datePicker.topAnchor.constraint(equalTo: view.topAnchor, constant: 235),
+            datePicker.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 25),
+            datePicker.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12),
+            
+//            miniView.topAnchor.constraint(equalTo: view.topAnchor, constant: 200),
+//            miniView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
+//            miniView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
+            
+            buttonStart.topAnchor.constraint(equalTo: timer.bottomAnchor, constant: 40),
+            buttonStart.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 100),
+            buttonStart.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -100),
+            
+            pauseButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            pauseButton.topAnchor.constraint(equalTo: timer.bottomAnchor, constant: 40),
+            pauseButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 100),
+            pauseButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -100),
+            
+            resumeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            resumeButton.topAnchor.constraint(equalTo: timer.bottomAnchor, constant: 40),
+            resumeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 100),
+            resumeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -100),
+            
+            stopButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stopButton.topAnchor.constraint(equalTo: pauseButton.bottomAnchor, constant: 8),
+            stopButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 100),
+            stopButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -100),
         ])
+        buttonStart.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
+        pauseButton.addTarget(self, action: #selector(pauseButtonTapped), for: .touchUpInside)
+        resumeButton.addTarget(self, action: #selector(resumeButtonTapped), for: .touchUpInside)
+        stopButton.addTarget(self, action: #selector(stopButtonTapped), for: .touchUpInside)
+        datePicker.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
+        pauseButton.isHidden = true
+        stopButton.isHidden = true
+        resumeButton.isHidden = true
     }
     
-    @objc func moduleWantsToGoToProfile() {
-        output.moduleWantsToGoToProfile()
+    // Обработчик изменения значения datePicker
+    @objc private func datePickerValueChanged(_ sender: UIDatePicker) {
+        // Обновление начального значения таймера
+        let interval = sender.countDownDuration
+        let beginingValue = Int(interval)
+        timer.start(beginingValue: beginingValue, interval: 1)
     }
     
-    @objc func wantsToSwitchToStopwatch() {
-        output.wantsToSwitchToStopwatch()
+    @objc private func startButtonTapped(_ sender: UIButton) {
+        Globals.isTimerVisible = true
+        Globals.meditationToday = true
+        // Запуск таймера
+        let interval = datePicker.countDownDuration
+        let beginingValue = Int(interval)
+        timer.start(beginingValue: beginingValue, interval: 1)
+        
+        buttonStart.isHidden = true
+        pauseButton.isHidden = false
+        resumeButton.isHidden = true
+        stopButton.isHidden = false
+        datePicker.isHidden = true
     }
     
-    @objc func wantsToSwitchToPrograms() {
-        output.wantsToSwitchToPrograms()
+      @objc private func pauseButtonTapped(_ sender: UIButton) {
+          Globals.isTimerVisible = true
+          timer.pause()
+          buttonStart.isHidden = true
+          resumeButton.isHidden = false
+          pauseButton.isHidden = true
+          stopButton.isHidden = false
+          datePicker.isHidden = true
+      }
+    
+    @objc private func resumeButtonTapped(_ sender: UIButton) {
+        Globals.isTimerVisible = true
+        timer.resume()
+        buttonStart.isHidden = true
+        resumeButton.isHidden = true
+        pauseButton.isHidden = false
+        stopButton.isHidden = false
+        datePicker.isHidden = true
+    }
+    
+    @objc private func stopButtonTapped(_ sender: UIButton) {
+        Globals.isTimerVisible = false
+        timer.end()
+        buttonStart.isHidden = false
+        resumeButton.isHidden = true
+        pauseButton.isHidden = true
+        stopButton.isHidden = true
+        datePicker.isHidden = false
     }
 }
 
 extension MainViewController: MainViewInput { }
+

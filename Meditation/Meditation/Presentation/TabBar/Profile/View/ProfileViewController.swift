@@ -8,10 +8,11 @@
 import UIKit
 import FSCalendar
 
+// персистентность - UserDefaults
 var meditatedDates: [Date] = []
 
 class ProfileViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
-    var coordinator: ProfileCoordinator?
+//    var coordinator: ProfileCoordinator?
     var calendar: FSCalendar!
     var greenDate = false
     
@@ -58,8 +59,9 @@ class ProfileViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
 
 extension ProfileViewController {
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, fillDefaultColorFor date: Date) -> UIColor? {
-        if meditatedDates.contains(date) {
-//            let selectionColorGreen = UIColor(red: 0.58, green: 0.80, blue: 0.66, alpha: 1.0)
+        if Globals.meditationToday {
+            meditatedDates.append(date)
+            //            let selectionColorGreen = UIColor(red: 0.58, green: 0.80, blue: 0.66, alpha: 1.0)
             return UIColor.red // Возвращаем красный цвет для помеченных дат
         }
         return nil // Возвращаем nil для не помеченных дат

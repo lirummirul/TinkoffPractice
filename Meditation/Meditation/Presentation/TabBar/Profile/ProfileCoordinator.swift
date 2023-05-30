@@ -11,10 +11,7 @@ class ProfileCoordinator: Coordinator, ProfileCoordinatorProtocol {
     var primaryNavigationController: CoordinatedNavigationController
 
     private let output: ProfileOutput
-    private static let firstRunDefaultsKey = "ShownFirstRun"
 
-    // True при первом запуске приложения.
-    
     init(navigationController: CoordinatedNavigationController = CoordinatedNavigationController(), output: ProfileOutput) {
         // Настройка главного конроллера
         self.output = output
@@ -22,8 +19,10 @@ class ProfileCoordinator: Coordinator, ProfileCoordinatorProtocol {
         primaryNavigationController.navigationBar.prefersLargeTitles = true
         primaryNavigationController.coordinator = self
         let viewController = ProfileModuleBuilder().build(output: self)
-//        viewController.coordinator = self
         primaryNavigationController.viewControllers = [viewController]
+        
+        UITabBar.appearance().isTranslucent = true
+        UITabBar.appearance().backgroundColor = UIColor.clear
 
         viewController.loadViewIfNeeded()
         viewController.tabBarItem = UITabBarItem(title: "Person", image: UIImage(systemName: "button.programmable"), tag: 4)
@@ -42,6 +41,4 @@ extension ProfileCoordinator: ProfileModuleOutput {
     func wantsToSwitchToTimer() {
         output.wantsToSwitchToTimer()
     }
-    
-    
 }

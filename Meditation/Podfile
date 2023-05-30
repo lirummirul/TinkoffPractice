@@ -12,6 +12,7 @@ pod 'Firebase/Auth'
 pod 'FSCalendar'
 pod 'FirebaseFirestore'
 pod 'Firebase'
+pod 'YM-API'
 
   # Pods for Meditation
 pod 'SwiftLint', '~> 0.46.2'

@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                print("Лада, ты тут")
 //            }
 //        }
+
         return true
     }
 }
