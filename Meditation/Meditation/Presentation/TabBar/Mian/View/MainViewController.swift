@@ -60,6 +60,18 @@ class MainViewController: UIViewController, SRCountdownTimerDelegate {
         return button
     }()
 
+    let musicButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setTitle("музыка", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 21)
+        let col = UIColor(red: 0.24, green: 0.54, blue: 0.58, alpha: 1.0)
+        button.setTitleColor(col, for: .normal)
+        let backgroundColorButtonAuth = UIColor(red: 1, green: 1, blue: 1, alpha: 0.5)
+        button.backgroundColor = backgroundColorButtonAuth
+        button.layer.cornerRadius = 20
+        return button
+    }()
+    
     // MARK: - LifeCycle
     private let output: MainViewOutput
     
@@ -106,14 +118,15 @@ class MainViewController: UIViewController, SRCountdownTimerDelegate {
         view.addSubview(resumeButton)
         view.addSubview(pauseButton)
         view.addSubview(stopButton)
-//        view.addSubview(miniView)
+        view.addSubview(musicButton)
+        
         timer.translatesAutoresizingMaskIntoConstraints = false
         datePicker.translatesAutoresizingMaskIntoConstraints = false
         buttonStart.translatesAutoresizingMaskIntoConstraints = false
         pauseButton.translatesAutoresizingMaskIntoConstraints = false
         resumeButton.translatesAutoresizingMaskIntoConstraints = false
         stopButton.translatesAutoresizingMaskIntoConstraints = false
-//        miniView.translatesAutoresizingMaskIntoConstraints = false
+        musicButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             timer.topAnchor.constraint(equalTo: view.topAnchor, constant: 200),
@@ -125,10 +138,6 @@ class MainViewController: UIViewController, SRCountdownTimerDelegate {
             datePicker.topAnchor.constraint(equalTo: view.topAnchor, constant: 235),
             datePicker.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 25),
             datePicker.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12),
-            
-//            miniView.topAnchor.constraint(equalTo: view.topAnchor, constant: 200),
-//            miniView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
-//            miniView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
             
             buttonStart.topAnchor.constraint(equalTo: timer.bottomAnchor, constant: 40),
             buttonStart.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 100),
@@ -145,15 +154,22 @@ class MainViewController: UIViewController, SRCountdownTimerDelegate {
             resumeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -100),
             
             stopButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            stopButton.topAnchor.constraint(equalTo: pauseButton.bottomAnchor, constant: 8),
+            stopButton.topAnchor.constraint(equalTo: pauseButton.bottomAnchor, constant: 54),
             stopButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 100),
             stopButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -100),
+            
+            musicButton.topAnchor.constraint(equalTo: buttonStart.bottomAnchor, constant: 8),
+            musicButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 100),
+            musicButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -100)
+//            musicButton.widthAnchor.constraint(equalToConstant: 35),
+//            musicButton.heightAnchor.constraint(equalToConstant: 35)
         ])
         buttonStart.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
         pauseButton.addTarget(self, action: #selector(pauseButtonTapped), for: .touchUpInside)
         resumeButton.addTarget(self, action: #selector(resumeButtonTapped), for: .touchUpInside)
         stopButton.addTarget(self, action: #selector(stopButtonTapped), for: .touchUpInside)
         datePicker.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
+        musicButton.addTarget(self, action: #selector(musicButtonTapped), for: .touchUpInside)
         pauseButton.isHidden = true
         stopButton.isHidden = true
         resumeButton.isHidden = true
@@ -211,7 +227,10 @@ class MainViewController: UIViewController, SRCountdownTimerDelegate {
         stopButton.isHidden = true
         datePicker.isHidden = false
     }
+    
+    @objc private func musicButtonTapped(_ sender: UIButton) {
+        output.wantsToSwitchToMusic()
+    }
 }
 
 extension MainViewController: MainViewInput { }
-

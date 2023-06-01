@@ -17,4 +17,5 @@ protocol MainOutput: AnyObject {
     func wantsToSwitchToStopwatch()
     func wantsToSwitchToPrograms()
     func wantsToSwitchToProfile()
+    func wantsToSwitchToMusic()
 }

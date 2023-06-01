@@ -17,6 +17,10 @@ class TabBarPresenter {
 }
 
 extension TabBarPresenter: TabBarViewOutput {
+    func wantsToSwitchToMusic() {
+        output.wantsToSwitchToMusic()
+    }
+    
     func moduleDidTabTimer() {
         output.moduleDidTabTimer()
     }

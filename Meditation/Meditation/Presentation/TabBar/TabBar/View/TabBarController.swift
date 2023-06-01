@@ -49,6 +49,10 @@ class TabBarController: UITabBarController {
     }
 }
 extension TabBarController: MainOutput, StopWatchOutput, ProgramOutput, ProfileOutput {
+    func wantsToSwitchToMusic() {
+        output.wantsToSwitchToMusic()
+    }
+    
     func wantsToSwitchToTimer() {
         output.moduleDidTabTimer()
     }

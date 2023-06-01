@@ -13,4 +13,5 @@ protocol MainViewOutput: AnyObject {
     func moduleWantsToGoToProfile()
     func wantsToSwitchToStopwatch()
     func wantsToSwitchToPrograms()
+    func wantsToSwitchToMusic()
 }

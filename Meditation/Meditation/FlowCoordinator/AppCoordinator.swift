@@ -35,6 +35,11 @@ class AppCoordinator: FlowCoordinatorProtocol {
         homeVC.navigationItem.hidesBackButton = true
         navigationController.pushViewController(homeVC, animated: true)
     }
+    
+    func showMusic() {
+        let musicCoordinator = MusicModuleBuilder().build(output: self)
+        navigationController.pushViewController(musicCoordinator, animated: true)
+    }
 }
 
 extension AppCoordinator: AppInput {
@@ -44,6 +49,10 @@ extension AppCoordinator: AppInput {
 }
 
 extension AppCoordinator: TabBarModuleOutput {
+    func wantsToSwitchToMusic() {
+        showMusic()
+    }
+    
     func moduleDidTabTimer() {
         showMain()
     }
@@ -58,9 +67,13 @@ extension AppCoordinator: TabBarModuleOutput {
     
     func moduleDidTabProfile() {
         showMain()
+    } 
+}
+
+extension AppCoordinator: MusicModuleOutput {
+    func moduleWantsToExit() {
+        showMain()
     }
-    
-    
 }
 
 extension AppCoordinator: AuthOutput { }

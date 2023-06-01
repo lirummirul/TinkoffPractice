@@ -21,6 +21,7 @@ class MainCoordinator: Coordinator, MainCoordinatorProtocol {
         self.output = output
         self.primaryNavigationController = navigationController
         primaryNavigationController.navigationBar.prefersLargeTitles = true
+        primaryNavigationController.navigationBar.isTranslucent = true
         primaryNavigationController.coordinator = self
 
         let viewController = MainModuleBuilder().build(output: self)
@@ -32,6 +33,10 @@ class MainCoordinator: Coordinator, MainCoordinatorProtocol {
 }
 
 extension MainCoordinator: MainModuleOutput {
+    func wantsToSwitchToMusic() {
+        output.wantsToSwitchToMusic()
+    }
+    
     func wantsToSwitchToStopwatch() {
         output.wantsToSwitchToStopwatch()
     }

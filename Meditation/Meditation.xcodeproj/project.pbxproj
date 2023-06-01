@@ -35,7 +35,19 @@
 		0763AA652A24F85D0057B19A /* StopWatchCoordinatopProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763AA642A24F85D0057B19A /* StopWatchCoordinatopProtocol.swift */; };
 		0763AA672A24F86B0057B19A /* StopWatchModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763AA662A24F86B0057B19A /* StopWatchModuleBuilder.swift */; };
 		0763AA692A25EAA50057B19A /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763AA682A25EAA50057B19A /* Globals.swift */; };
-		0763AA6C2A2621140057B19A /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763AA6B2A2621140057B19A /* Music.swift */; };
+		0763AA6F2A26401A0057B19A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763AA6E2A26401A0057B19A /* NetworkService.swift */; };
+		0763AA752A2640BF0057B19A /* MusicModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763AA742A2640BF0057B19A /* MusicModuleBuilder.swift */; };
+		0763AA772A2640D20057B19A /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763AA762A2640D20057B19A /* MusicViewController.swift */; };
+		0763AA792A2640E40057B19A /* MusicViewIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763AA782A2640E40057B19A /* MusicViewIO.swift */; };
+		0763AA7B2A2640F30057B19A /* MusicPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763AA7A2A2640F30057B19A /* MusicPresenter.swift */; };
+		0763AA7D2A2640FF0057B19A /* MusicModuleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763AA7C2A2640FF0057B19A /* MusicModuleIO.swift */; };
+		0763AA7F2A2750CF0057B19A /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763AA7E2A2750CF0057B19A /* APIResponse.swift */; };
+		0763AA822A27991C0057B19A /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763AA812A27991C0057B19A /* Character.swift */; };
+		0763AA852A279A250057B19A /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763AA842A279A250057B19A /* CharacterCell.swift */; };
+		0763AA872A279C350057B19A /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763AA862A279C350057B19A /* Presenter.swift */; };
+		0763AA892A279D690057B19A /* UIImageView+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763AA882A279D690057B19A /* UIImageView+Extentions.swift */; };
+		0763AA8B2A279DA20057B19A /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763AA8A2A279DA20057B19A /* CacheManager.swift */; };
+		0763AA8D2A2820910057B19A /* MainMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763AA8C2A2820910057B19A /* MainMusicViewController.swift */; };
 		07718DAD29FB993D003CEAD3 /* SignupModuleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07718DAC29FB993D003CEAD3 /* SignupModuleIO.swift */; };
 		07718DBF29FBAB17003CEAD3 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07718DBE29FBAB17003CEAD3 /* AlertManager.swift */; };
 		07718E022A03BD0D003CEAD3 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07718E012A03BD0D003CEAD3 /* ProfilePresenter.swift */; };
@@ -99,7 +111,19 @@
 		0763AA642A24F85D0057B19A /* StopWatchCoordinatopProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchCoordinatopProtocol.swift; sourceTree = "<group>"; };
 		0763AA662A24F86B0057B19A /* StopWatchModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchModuleBuilder.swift; sourceTree = "<group>"; };
 		0763AA682A25EAA50057B19A /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
-		0763AA6B2A2621140057B19A /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		0763AA6E2A26401A0057B19A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		0763AA742A2640BF0057B19A /* MusicModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModuleBuilder.swift; sourceTree = "<group>"; };
+		0763AA762A2640D20057B19A /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		0763AA782A2640E40057B19A /* MusicViewIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewIO.swift; sourceTree = "<group>"; };
+		0763AA7A2A2640F30057B19A /* MusicPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPresenter.swift; sourceTree = "<group>"; };
+		0763AA7C2A2640FF0057B19A /* MusicModuleIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModuleIO.swift; sourceTree = "<group>"; };
+		0763AA7E2A2750CF0057B19A /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		0763AA812A27991C0057B19A /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		0763AA842A279A250057B19A /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		0763AA862A279C350057B19A /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		0763AA882A279D690057B19A /* UIImageView+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extentions.swift"; sourceTree = "<group>"; };
+		0763AA8A2A279DA20057B19A /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		0763AA8C2A2820910057B19A /* MainMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMusicViewController.swift; sourceTree = "<group>"; };
 		07718DAC29FB993D003CEAD3 /* SignupModuleIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModuleIO.swift; sourceTree = "<group>"; };
 		07718DBE29FBAB17003CEAD3 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		07718E012A03BD0D003CEAD3 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
@@ -286,9 +310,68 @@
 		0763AA6A2A2620FD0057B19A /* YA_API */ = {
 			isa = PBXGroup;
 			children = (
-				0763AA6B2A2621140057B19A /* Music.swift */,
+				0763AA802A2799060057B19A /* model */,
+				0763AA6D2A2640020057B19A /* Network */,
+				0763AA8A2A279DA20057B19A /* CacheManager.swift */,
 			);
 			path = YA_API;
+			sourceTree = "<group>";
+		};
+		0763AA6D2A2640020057B19A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0763AA6E2A26401A0057B19A /* NetworkService.swift */,
+				0763AA7E2A2750CF0057B19A /* APIResponse.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0763AA702A26406C0057B19A /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				0763AA722A26409D0057B19A /* Presenter */,
+				0763AA732A2640A70057B19A /* View */,
+				0763AA742A2640BF0057B19A /* MusicModuleBuilder.swift */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		0763AA712A2640750057B19A /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				07C95BE629DD8C26001FD318 /* Login */,
+				072140E229E0392000EEA6F2 /* Signup */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		0763AA722A26409D0057B19A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0763AA7A2A2640F30057B19A /* MusicPresenter.swift */,
+				0763AA7C2A2640FF0057B19A /* MusicModuleIO.swift */,
+				0763AA862A279C350057B19A /* Presenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0763AA732A2640A70057B19A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0763AA842A279A250057B19A /* CharacterCell.swift */,
+				0763AA762A2640D20057B19A /* MusicViewController.swift */,
+				0763AA782A2640E40057B19A /* MusicViewIO.swift */,
+				0763AA8C2A2820910057B19A /* MainMusicViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0763AA802A2799060057B19A /* model */ = {
+			isa = PBXGroup;
+			children = (
+				0763AA812A27991C0057B19A /* Character.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		07718DBC29FBAACD003CEAD3 /* Common */ = {
@@ -305,6 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				07718DBE29FBAB17003CEAD3 /* AlertManager.swift */,
+				0763AA882A279D690057B19A /* UIImageView+Extentions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -415,9 +499,9 @@
 		07C95BE529DD8C11001FD318 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				0763AA702A26406C0057B19A /* Music */,
 				07718E162A0E4EE4003CEAD3 /* TabBar */,
-				07C95BE629DD8C26001FD318 /* Login */,
-				072140E229E0392000EEA6F2 /* Signup */,
+				0763AA712A2640750057B19A /* Auth */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -634,29 +718,34 @@
 				07C95BEF29DD8D3A001FD318 /* LoginViewController.swift in Sources */,
 				0763AA342A23BAFA0057B19A /* MainModuleBuilder.swift in Sources */,
 				07718E182A0E4EFC003CEAD3 /* TabBarController.swift in Sources */,
+				0763AA852A279A250057B19A /* CharacterCell.swift in Sources */,
 				07720F7029F27A29008AD888 /* LoginModuleIO.swift in Sources */,
 				0763AA302A23BAD40057B19A /* MainPresenter.swift in Sources */,
 				07718E242A0E80FD003CEAD3 /* StopWatchViewController.swift in Sources */,
 				0763AA532A24EC390057B19A /* ProgramModuleIO.swift in Sources */,
 				0763AA4F2A24EC180057B19A /* ProgramCoordinatorProtocol.swift in Sources */,
-				0763AA6C2A2621140057B19A /* Music.swift in Sources */,
 				0763AA362A23BB260057B19A /* MainViewIO.swift in Sources */,
 				0763AA632A24F8500057B19A /* StopWatchModuleIO.swift in Sources */,
 				0763AA322A23BAE40057B19A /* MainModuleIO.swift in Sources */,
 				07718E072A03BD49003CEAD3 /* ProfileModuleBuilder.swift in Sources */,
 				0763AA692A25EAA50057B19A /* Globals.swift in Sources */,
+				0763AA7B2A2640F30057B19A /* MusicPresenter.swift in Sources */,
 				072140D929E02C3A00EEA6F2 /* Coordinator.swift in Sources */,
 				07718E042A03BD1A003CEAD3 /* ProfileModuleIO.swift in Sources */,
 				073BE4A02A1BA33200CADBD7 /* SRCountdownTimer.swift in Sources */,
 				07718E262A0E810C003CEAD3 /* StopWatchCoordinator.swift in Sources */,
 				072140E629E03BB900EEA6F2 /* CoordinatorProtocol.swift in Sources */,
 				0763AA5B2A24ECB00057B19A /* ProfileCoordinatorProtocol.swift in Sources */,
+				0763AA7F2A2750CF0057B19A /* APIResponse.swift in Sources */,
 				07718E1E2A0E6495003CEAD3 /* ProfileCoordinator.swift in Sources */,
 				07720F6C29EFC9A3008AD888 /* SignupModuleBuilder.swift in Sources */,
 				0763AA572A24EC5C0057B19A /* ProgramModuleBuilder.swift in Sources */,
 				0763AA492A23C9990057B19A /* TabBarViewIO.swift in Sources */,
 				07720F6E29EFCA1D008AD888 /* SignupPresenter.swift in Sources */,
+				0763AA792A2640E40057B19A /* MusicViewIO.swift in Sources */,
 				07DD2A4229CC8A830074E491 /* AppDelegate.swift in Sources */,
+				0763AA6F2A26401A0057B19A /* NetworkService.swift in Sources */,
+				0763AA892A279D690057B19A /* UIImageView+Extentions.swift in Sources */,
 				0763AA652A24F85D0057B19A /* StopWatchCoordinatopProtocol.swift in Sources */,
 				07718E022A03BD0D003CEAD3 /* ProfilePresenter.swift in Sources */,
 				07720F6429E8557F008AD888 /* FlowCoordinatorProtocol.swift in Sources */,
@@ -664,9 +753,13 @@
 				072140DF29E0308F00EEA6F2 /* AuthCoordinator.swift in Sources */,
 				07720F5F29E6E6B7008AD888 /* LoginModuleBuilder.swift in Sources */,
 				0763AA3C2A23C8C70057B19A /* TabBarPresenter.swift in Sources */,
+				0763AA752A2640BF0057B19A /* MusicModuleBuilder.swift in Sources */,
 				07718E1C2A0E632E003CEAD3 /* MainCoordinator.swift in Sources */,
+				0763AA772A2640D20057B19A /* MusicViewController.swift in Sources */,
+				0763AA8D2A2820910057B19A /* MainMusicViewController.swift in Sources */,
 				07718E282A0E811F003CEAD3 /* ProgramViewController.swift in Sources */,
 				07718E132A0BD844003CEAD3 /* CustomButton.swift in Sources */,
+				0763AA7D2A2640FF0057B19A /* MusicModuleIO.swift in Sources */,
 				0763AA382A23BFB60057B19A /* MainCoordinatorProtocol.swift in Sources */,
 				07720F6A29EFC98D008AD888 /* SigupViewIO.swift in Sources */,
 				0763AA552A24EC4C0057B19A /* PreogramViewIO.swift in Sources */,
@@ -674,8 +767,10 @@
 				07718DAD29FB993D003CEAD3 /* SignupModuleIO.swift in Sources */,
 				07718E152A0BD852003CEAD3 /* CustomTextField.swift in Sources */,
 				0763AA512A24EC2B0057B19A /* ProgramPresenter.swift in Sources */,
+				0763AA8B2A279DA20057B19A /* CacheManager.swift in Sources */,
 				072140E429E0394300EEA6F2 /* SignupViewController.swift in Sources */,
 				07720F6629E86187008AD888 /* AppCoordinator.swift in Sources */,
+				0763AA822A27991C0057B19A /* Character.swift in Sources */,
 				07720F6129E6EB8F008AD888 /* LoginViewIO.swift in Sources */,
 				072140DB29E02E5600EEA6F2 /* LoginPresenter.swift in Sources */,
 				0763AA5F2A24F8320057B19A /* StopWatchViewIO.swift in Sources */,
@@ -683,6 +778,7 @@
 				07718DBF29FBAB17003CEAD3 /* AlertManager.swift in Sources */,
 				0763AA452A23C9780057B19A /* TabBarModuleBuilder.swift in Sources */,
 				07718E092A03BD56003CEAD3 /* ProfileViewIO.swift in Sources */,
+				0763AA872A279C350057B19A /* Presenter.swift in Sources */,
 				07718E2A2A0E812B003CEAD3 /* ProgramCoordinator.swift in Sources */,
 				0763AA612A24F8440057B19A /* StopWatchPresenter.swift in Sources */,
 				07C95BED29DD8CAF001FD318 /* ProfileViewController.swift in Sources */,

@@ -14,4 +14,5 @@ protocol TabBarModuleOutput: AnyObject {
     func moduleDidTabStopWatch()
     func moduleDidTabProgram()
     func moduleDidTabProfile()
+    func wantsToSwitchToMusic()
 }

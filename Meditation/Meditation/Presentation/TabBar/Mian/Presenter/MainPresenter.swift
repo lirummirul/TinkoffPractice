@@ -17,6 +17,10 @@ class MainPresenter {
 }
 
 extension MainPresenter: MainViewOutput {
+    func wantsToSwitchToMusic() {
+        self.output.wantsToSwitchToMusic()
+    }
+    
     func wantsToSwitchToStopwatch() {
         self.output.wantsToSwitchToStopwatch()
     }
