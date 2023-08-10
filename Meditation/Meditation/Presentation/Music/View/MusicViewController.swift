@@ -39,7 +39,6 @@ final class MusicViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.backgroundColor = .white
         setupUI()
         presenter.viewDidLoad()
     }
@@ -62,7 +61,6 @@ extension MusicViewController: IView {
 
 extension MusicViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        print(presenter.dataSource.count)
         return presenter.dataSource.count
     }
 
@@ -78,42 +76,11 @@ extension MusicViewController: UITableViewDataSource {
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let model = presenter.dataSource[indexPath.row]
-//        print("model \(model.audio)")
-//        guard let audioURL = URL(string: model.audio) else {
-//            print("Ошибка парсинга аудио URL")
-//            return
-//        }
-//        print("audioURL \(audioURL)")
-//
-//        do {
-//            try AVAudioSession.sharedInstance().setCategory(.playback)
-//            try AVAudioSession.sharedInstance().setActive(true)
-//        } catch {
-//            print("Ошибка настройки AVAudioSession: \(error.localizedDescription)")
-//        }
-//
-//        let player = AVPlayer(url: audioURL)
-//        print("player \(player)")
-//        player.play()
-//        if let error = player.error {
-//            print("Ошибка воспроизведения: \(error.localizedDescription)")
-//        }
-//
-//    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let model = presenter.dataSource[indexPath.row]
-//        guard let audioURL = URL(string: model.audio) else {
-//            print("Ошибка парсинга аудио URL")
-//            return
-//        }
-        
         let musicPlayerViewController = MainMusicViewController(model: model)
         navigationController?.pushViewController(musicPlayerViewController, animated: true)
     }
-
 }
 
 extension MusicViewController: UITableViewDelegate {

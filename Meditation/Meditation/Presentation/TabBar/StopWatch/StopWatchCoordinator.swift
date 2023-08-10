@@ -27,6 +27,10 @@ class StopWatchCoordinator: Coordinator, StopWatchCoordinatorProtocol {
 }
 
 extension StopWatchCoordinator: StopWatchModuleOutput {
+    func wantsToSwitchToMusic() {
+        output.wantsToSwitchToMusic()
+    }
+    
     func wantsToSwitchToTimer() {
         output.wantsToSwitchToTimer()
     }

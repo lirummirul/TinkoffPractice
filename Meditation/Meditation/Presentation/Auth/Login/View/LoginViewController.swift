@@ -128,7 +128,6 @@ class LoginViewController: UIViewController {
     
     @objc func didTapLoginButton() {
         guard
-//            let login = loginTextField.text,
             let email = loginTextField.text,
             let password = passTextField.text,
             !email.isEmpty,
@@ -137,7 +136,6 @@ class LoginViewController: UIViewController {
             return
         }
         output.didTapLoginButton(email: email, password: password)
-//        print("123123")
     }
     
     @objc func didTapSignUpButton() {

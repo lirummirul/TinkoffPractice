@@ -51,7 +51,6 @@ extension AuthCoordinator: SignupModuleOutput {
 
 extension AuthCoordinator: AuthInput {
     func loginDidFinish() {
-        // Вот тут я не уверена
         output.signLoginSuccessfully()
     }
 

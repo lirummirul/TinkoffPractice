@@ -25,9 +25,8 @@ class MainCoordinator: Coordinator, MainCoordinatorProtocol {
         primaryNavigationController.coordinator = self
 
         let viewController = MainModuleBuilder().build(output: self)
-//        viewController.coordinator = self
         primaryNavigationController.viewControllers = [viewController]
-        
+
         viewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "button.programmable"), tag: 1)
     }
 }

@@ -17,6 +17,9 @@ class StopWatchPresenter {
 }
 
 extension StopWatchPresenter: StopWatchViewOutput {
+    func wantsToSwitchToMusic() {
+        output.wantsToSwitchToMusic()
+    }
     
     func moduleWantsToGoToTimer() {
         self.output.wantsToSwitchToTimer()

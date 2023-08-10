@@ -138,9 +138,9 @@ class MainMusicViewController: UIViewController {
 //            nextButton.widthAnchor.constraint(equalToConstant: 100),
 //            nextButton.heightAnchor.constraint(equalToConstant: 40),
 
-            volumeSlider.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 60),
-            volumeSlider.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            volumeSlider.topAnchor.constraint(equalTo: pauseButton.bottomAnchor, constant: 20)
+            volumeSlider.topAnchor.constraint(equalTo: pauseButton.bottomAnchor, constant: 60),
+            volumeSlider.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            volumeSlider.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
         ])
         playButton.addTarget(self, action: #selector(playButtonTapped), for: .touchUpInside)
         pauseButton.addTarget(self, action: #selector(pauseButtonTapped), for: .touchUpInside)
@@ -152,6 +152,14 @@ class MainMusicViewController: UIViewController {
     @objc private func playButtonTapped() {
         pauseButton.isHidden = false
         playButton.isHidden = true
+        print(audioPlayer)
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: audioURL)
+            audioPlayer?.prepareToPlay()
+        } catch {
+            print("Failed to initialize audio player: \(error.localizedDescription)")
+        }
+        print(audioPlayer)
         audioPlayer?.play()
     }
     
@@ -176,16 +184,16 @@ class MainMusicViewController: UIViewController {
             print("Ошибка парсинга аудио URL")
             return
         }
-//        guard let audioURL = audioURL else {
-//            print("No audio URL provided")
-//            return
-//        }
-
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: audioURL)
-            audioPlayer?.prepareToPlay()
-        } catch {
-            print("Failed to initialize audio player: \(error.localizedDescription)")
+        
+        DispatchQueue.main.async {
+            do {
+                let audioData = try Data(contentsOf: audioURL)
+                print(audioData)
+                self.audioPlayer = try AVAudioPlayer(data: audioData)
+                self.audioPlayer?.prepareToPlay()
+            } catch {
+                print("Failed to initialize audio player: \(error.localizedDescription)")
+            }
         }
     }
     

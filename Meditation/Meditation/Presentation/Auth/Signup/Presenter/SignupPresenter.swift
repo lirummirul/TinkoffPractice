@@ -23,10 +23,8 @@ class SignupPresenter {
         self.output = output
     }
 }
-// Ещё про регистрацию: пользователь должен вводить номер/почту или просто свой ник
 
 extension SignupPresenter: SignupViewOutput {
-    // Обработка ошибок и успешной регистрации
     func signupButtonTapped(login: String, email: String, password: String) {
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
             if error == nil {

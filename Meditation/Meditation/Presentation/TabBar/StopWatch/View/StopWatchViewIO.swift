@@ -13,4 +13,5 @@ protocol StopWatchViewOutput: AnyObject {
     func moduleWantsToGoToTimer()
     func wantsToSwitchToProfile()
     func wantsToSwitchToPrograms()
+    func wantsToSwitchToMusic()
 }

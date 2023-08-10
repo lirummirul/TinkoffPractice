@@ -9,11 +9,8 @@ import UIKit
 import FirebaseAuth
 
 class AppCoordinator: FlowCoordinatorProtocol {
-
     var navigationController: UINavigationController
-//    private let output: AppOutput
     init(navigationController: UINavigationController) {
-//        self.output = output
         self.navigationController = navigationController
     }
     

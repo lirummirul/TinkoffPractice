@@ -7,8 +7,6 @@
 
 import UIKit
 
-// MARK: MVP ЛАДААА!!!!
-
 class TabBarController: UITabBarController {
     private let output: TabBarViewOutput
     init(output: TabBarViewOutput) {
@@ -28,15 +26,6 @@ class TabBarController: UITabBarController {
         let stopwatch = StopWatchCoordinator(output: self)
         let programs = ProgramCoordinator(output: self)
         let calendar = ProfileCoordinator(output: self)
-        
-//        self.isTranslucent = true
-//        self.backgroundColor = UIColor.clear
-//        self.tabBarController?.tabBar.isTranslucent = true
-//        self.tabBarController?.tabBar.backgroundColor = UIColor.clear
-        
-//        let appearance = self.tabBarController?.tabBar.standardAppearance.copy()
-//        appearance!.configureWithTransparentBackground()
-//        tabBarController?.tabBar.standardAppearance = appearance!
         
         // Настройка внешнего вида tabBarItem
         let selectedAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]

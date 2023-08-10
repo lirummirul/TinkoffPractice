@@ -124,7 +124,7 @@ class SignupViewController: UIViewController {
         else {
             return
         }
-        if (password == passwordReplay) {
+        if password == passwordReplay {
             output.signupButtonTapped(login: login, email: email, password: password)
         } else {
             showOneActionAlert(title: "Пароли не совпадают", message: "Пожалуйста, поменяйте", mainButtomTitle: "OK")

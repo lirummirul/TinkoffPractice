@@ -8,7 +8,6 @@
 import UIKit
 
 class MainViewController: UIViewController, SRCountdownTimerDelegate {
-//    var coordinator: MainCoordinator?
     var timer: SRCountdownTimer!
     let datePicker = UIDatePicker()
     
@@ -86,7 +85,6 @@ class MainViewController: UIViewController, SRCountdownTimerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let backgroundColorMain = UIColor(red: 0.58, green: 0.80, blue: 0.66, alpha: 1.0)
         let backgroundImage = UIImage(named: "ocean")
         let backgroundImageView = UIImageView(image: backgroundImage)
         backgroundImageView.contentMode = .scaleAspectFill
@@ -94,18 +92,6 @@ class MainViewController: UIViewController, SRCountdownTimerDelegate {
         view.addSubview(backgroundImageView)
         view.sendSubviewToBack(backgroundImageView)
         datePicker.datePickerMode = .countDownTimer
-//        if let label = datePicker.subviews.first?.subviews.first as? UILabel {
-//            label.textColor = UIColor.white
-//        }
-//        datePicker.tintColor = UIColor.white
-//        datePicker.textColor = UIColor.white
-        // Создание пользовательского UITextField для отображения выбранной даты
-//        let dateTextField = UITextField()
-//        dateTextField.inputView = datePicker
-
-        // Настройка цвета текста в UITextField
-//        dateTextField.textColor = .white
-//        datePicker.backgroundColor = UIColor.clear
         timer = SRCountdownTimer()
         setup()
     }
@@ -161,8 +147,6 @@ class MainViewController: UIViewController, SRCountdownTimerDelegate {
             musicButton.topAnchor.constraint(equalTo: buttonStart.bottomAnchor, constant: 8),
             musicButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 100),
             musicButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -100)
-//            musicButton.widthAnchor.constraint(equalToConstant: 35),
-//            musicButton.heightAnchor.constraint(equalToConstant: 35)
         ])
         buttonStart.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
         pauseButton.addTarget(self, action: #selector(pauseButtonTapped), for: .touchUpInside)
@@ -175,9 +159,7 @@ class MainViewController: UIViewController, SRCountdownTimerDelegate {
         resumeButton.isHidden = true
     }
     
-    // Обработчик изменения значения datePicker
     @objc private func datePickerValueChanged(_ sender: UIDatePicker) {
-        // Обновление начального значения таймера
         let interval = sender.countDownDuration
         let beginingValue = Int(interval)
         timer.start(beginingValue: beginingValue, interval: 1)
@@ -186,7 +168,6 @@ class MainViewController: UIViewController, SRCountdownTimerDelegate {
     @objc private func startButtonTapped(_ sender: UIButton) {
         Globals.isTimerVisible = true
         Globals.meditationToday = true
-        // Запуск таймера
         let interval = datePicker.countDownDuration
         let beginingValue = Int(interval)
         timer.start(beginingValue: beginingValue, interval: 1)
@@ -198,15 +179,15 @@ class MainViewController: UIViewController, SRCountdownTimerDelegate {
         datePicker.isHidden = true
     }
     
-      @objc private func pauseButtonTapped(_ sender: UIButton) {
-          Globals.isTimerVisible = true
-          timer.pause()
-          buttonStart.isHidden = true
-          resumeButton.isHidden = false
-          pauseButton.isHidden = true
-          stopButton.isHidden = false
-          datePicker.isHidden = true
-      }
+    @objc private func pauseButtonTapped(_ sender: UIButton) {
+        Globals.isTimerVisible = true
+        timer.pause()
+        buttonStart.isHidden = true
+        resumeButton.isHidden = false
+        pauseButton.isHidden = true
+        stopButton.isHidden = false
+        datePicker.isHidden = true
+    }
     
     @objc private func resumeButtonTapped(_ sender: UIButton) {
         Globals.isTimerVisible = true
@@ -234,3 +215,17 @@ class MainViewController: UIViewController, SRCountdownTimerDelegate {
 }
 
 extension MainViewController: MainViewInput { }
+
+//    var coordinator: MainCoordinator?
+//        if let label = datePicker.subviews.first?.subviews.first as? UILabel {
+//            label.textColor = UIColor.white
+//        }
+//        datePicker.tintColor = UIColor.white
+//        datePicker.textColor = UIColor.white
+        // Создание пользовательского UITextField для отображения выбранной даты
+//        let dateTextField = UITextField()
+//        dateTextField.inputView = datePicker
+
+        // Настройка цвета текста в UITextField
+//        dateTextField.textColor = .white
+//        datePicker.backgroundColor = UIColor.clear

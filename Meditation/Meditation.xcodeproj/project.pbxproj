@@ -48,6 +48,7 @@
 		0763AA892A279D690057B19A /* UIImageView+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763AA882A279D690057B19A /* UIImageView+Extentions.swift */; };
 		0763AA8B2A279DA20057B19A /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763AA8A2A279DA20057B19A /* CacheManager.swift */; };
 		0763AA8D2A2820910057B19A /* MainMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763AA8C2A2820910057B19A /* MainMusicViewController.swift */; };
+		0763AA8F2A28C6330057B19A /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763AA8E2A28C6330057B19A /* Stopwatch.swift */; };
 		07718DAD29FB993D003CEAD3 /* SignupModuleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07718DAC29FB993D003CEAD3 /* SignupModuleIO.swift */; };
 		07718DBF29FBAB17003CEAD3 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07718DBE29FBAB17003CEAD3 /* AlertManager.swift */; };
 		07718E022A03BD0D003CEAD3 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07718E012A03BD0D003CEAD3 /* ProfilePresenter.swift */; };
@@ -124,6 +125,7 @@
 		0763AA882A279D690057B19A /* UIImageView+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extentions.swift"; sourceTree = "<group>"; };
 		0763AA8A2A279DA20057B19A /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		0763AA8C2A2820910057B19A /* MainMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMusicViewController.swift; sourceTree = "<group>"; };
+		0763AA8E2A28C6330057B19A /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 		07718DAC29FB993D003CEAD3 /* SignupModuleIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModuleIO.swift; sourceTree = "<group>"; };
 		07718DBE29FBAB17003CEAD3 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		07718E012A03BD0D003CEAD3 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 			children = (
 				07718E232A0E80FD003CEAD3 /* StopWatchViewController.swift */,
 				0763AA5E2A24F8320057B19A /* StopWatchViewIO.swift */,
+				0763AA8E2A28C6330057B19A /* Stopwatch.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -762,6 +765,7 @@
 				0763AA7D2A2640FF0057B19A /* MusicModuleIO.swift in Sources */,
 				0763AA382A23BFB60057B19A /* MainCoordinatorProtocol.swift in Sources */,
 				07720F6A29EFC98D008AD888 /* SigupViewIO.swift in Sources */,
+				0763AA8F2A28C6330057B19A /* Stopwatch.swift in Sources */,
 				0763AA552A24EC4C0057B19A /* PreogramViewIO.swift in Sources */,
 				0763AA672A24F86B0057B19A /* StopWatchModuleBuilder.swift in Sources */,
 				07718DAD29FB993D003CEAD3 /* SignupModuleIO.swift in Sources */,
