@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '13.0'
+
+target 'Meditation' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+pod 'FirebaseAnalytics'
+pod 'FirebaseAuth'
+pod 'Firebase/Core'
+pod 'Firebase/Database'
+pod 'Firebase/Auth'
+pod 'FSCalendar'
+pod 'FirebaseFirestore'
+pod 'Firebase'
+pod 'YM-API'
+pod 'Alamofire'
+pod 'SnapKit'
+
+  # Pods for Meditation
+pod 'SwiftLint', '~> 0.46.2'
+
+
+end
