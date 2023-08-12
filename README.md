@@ -29,7 +29,7 @@
    <img src="https://github.com/lirummirul/TinkoffPractice/blob/main/img/2023-08-12%2014.24.06.jpg" title="Login" alt="Login" width="200" higth="200"/>&nbsp;
    <br>
    <br>
-4. Выбор музыки : Музыка взята с открытого API с сайта jamendo.com. Для парсинга использовала библиотеку Alomofire
+4. Выбор музыки : Музыка взята с открытого API с сайта [jamendo.com](https://www.jamendo.com/playlist/500605176/chill-zone). Для парсинга использовала библиотеку Alomofire
    <br>
    <br>
    <img src="https://github.com/lirummirul/TinkoffPractice/blob/main/img/2023-08-12%2014.24.11.jpg" title="Login" alt="Login" width="200" higth="200"/>&nbsp;
