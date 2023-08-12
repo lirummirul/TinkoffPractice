@@ -17,18 +17,20 @@
    <img src="https://github.com/lirummirul/TinkoffPractice/blob/main/img/2023-08-12%2014.23.55.jpg" title="Login" alt="Login" width="200" higth="200"/>&nbsp;
    <br>
    <br>
-3. Секундомер
+2. Секундомер
    <br>
    <br>
    <img src="https://github.com/lirummirul/TinkoffPractice/blob/main/img/2023-08-12%2014.24.01.jpg" title="Login" alt="Login" width="200" higth="200"/>&nbsp;
    <br>
-5. Календарь : Зелёный цветом отмечаются дни, когда пользователь медитировал
+   <br>
+3. Календарь : Зелёный цветом отмечаются дни, когда пользователь медитировал
    <br>
    <br>
    <img src="https://github.com/lirummirul/TinkoffPractice/blob/main/img/2023-08-12%2014.24.06.jpg" title="Login" alt="Login" width="200" higth="200"/>&nbsp;
    <br>
    <br>
-#### Выбор музыки : Музыка взята с открытого API с сайта jamendo.com. Для парсинга использовала библиотеку Alomofire
-
+4. Выбор музыки : Музыка взята с открытого API с сайта jamendo.com. Для парсинга использовала библиотеку Alomofire
+   <br>
+   <br>
    <img src="https://github.com/lirummirul/TinkoffPractice/blob/main/img/2023-08-12%2014.24.11.jpg" title="Login" alt="Login" width="200" higth="200"/>&nbsp;
    <img src="https://github.com/lirummirul/TinkoffPractice/blob/main/img/2023-08-12%2014.24.16.jpg" title="Login" alt="Login" width="200" higth="200"/>&nbsp;
